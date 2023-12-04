@@ -31,8 +31,7 @@ function Row(props: { row: ReturnType<typeof createData> ,index:number}) {
     setDepartmentCheck(updatedCheckedState)
   }
 
-  function onOneSelect(position:number,event:any){
-    console.log(event.target)
+  function onOneSelect(position:number){
     const updatedCheckedState = sub_departmentChecked.map((item, index) =>
     index === position ? !item : item
   );
@@ -75,7 +74,7 @@ function Row(props: { row: ReturnType<typeof createData> ,index:number}) {
             color="primary"
             
                     checked={(departmentChecked[row.index]) || sub_departmentChecked[index]}
-                    onChange={() => onOneSelect(index,event)}
+                    onChange={() => onOneSelect(index)}
             />
                       <TableCell component="th" scope="row">
                         {sub_department}
@@ -94,7 +93,6 @@ function Row(props: { row: ReturnType<typeof createData> ,index:number}) {
 }
 const rows = data.map(ele => createData(ele.department,ele.sub_departments,ele.id))
 
-console.log('rows',rows)
 export default function TableTwo() {
   return (
     <>
