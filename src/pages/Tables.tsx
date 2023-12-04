@@ -27,8 +27,8 @@ const Tables = () =>{
 
 return(
     <>
-    {loginCtx.login && <AllTables/>}
-    {!loginCtx.login && localStorage.getItem('login') === 'true' && <FillDetails/>}
+    {loginCtx.login === true && localStorage.getItem('login') === 'false' && <AllTables/>}
+    {loginCtx.login === false && localStorage.getItem('login') === 'true' && <FillDetails/>}
     </>
 )
 }

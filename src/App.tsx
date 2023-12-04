@@ -6,8 +6,8 @@ import LoginContextProvider from './context/LoginContextProvider';
 import Error from './pages/Error';
 
 const routes = createBrowserRouter([
-  {path:'/',element:<Home/>},
-  {path:'tables',element:<Tables/>,errorElement:<Error/>}
+  {path:'/',element:<Home/>,errorElement:<Error/>},
+  {path:'tables',element:<Tables/>}
 ])
 
 function App() {
