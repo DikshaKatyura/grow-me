@@ -1,6 +1,6 @@
-# PropAccel-FrontendDev
-Front-End Demo Project for Prop Accel
-
+# GrowMe
+<h1>A simple project displaying some data in table form</h1>
+Access the project : https://grow-me-mu.vercel.app/
 This project is made using :
 Vite as it focuses on speed and performance by improving the development experience,
 React+Typescript as it focuses on frontend with strict mode,
